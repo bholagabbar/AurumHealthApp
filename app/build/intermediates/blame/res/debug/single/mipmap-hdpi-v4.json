@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\home\\prasang\\AndroidStudioProjects\\Aurum\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "E:\\home\\prasang\\AndroidStudioProjects\\Aurum\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Aurum\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "E:\\Aurum\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    }
+]

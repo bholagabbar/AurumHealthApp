@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:gravity="center"
+        android:id="@+id/tv_welcome"
+        android:textSize="35dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:hint="Name"
+        android:id="@+id/et_login_name"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:textColor="#727272"
+        android:textSize="20dp"
+        android:paddingLeft="15dp"
+        />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/et_login_name"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rg_sex_radioGroup"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:id="@+id/rb_male"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:id="@+id/rb_female"
+            />
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rg_sex_radioGroup"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age:"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_marginRight="50dp"
+            android:inputType="phone"
+            android:textColor="#727272"
+            android:text=""
+            android:gravity="center"
+            android:textSize="20dp"
+            android:id="@+id/et_login_age"
+            />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="Next"
+        android:layout_marginTop="90dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/tiles_shape"
+        android:textColor="#ffffff"
+        android:id="@+id/bt_login_next"
+        android:textSize="25dp"
+        android:layout_below="@+id/rg_sex_radioGroup"
+        />
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:2:1-52:12
+	package
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:3:5-37
+		INJECTED from E:\Aurum\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Aurum\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\Aurum\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Aurum\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from E:\Aurum\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Aurum\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:6:22-76
+application
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:10:5-50:19
+MERGED from [com.android.support:appcompat-v7:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:13:9-41
+	android:allowBackup
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:11:9-35
+	android:icon
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:12:9-43
+	android:theme
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:14:9-47
+activity#com.iotaconcepts.aurum.MainActivity
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:16:9-24:20
+	android:label
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:18:13-34
+	android:name
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:17:13-41
+intent-filter#android.intent.action.MAINACTIVITY+android.intent.category.DEFAULT
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAINACTIVITY
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:20:17-77
+	android:name
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:20:25-74
+category#android.intent.category.DEFAULT
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:22:17-76
+	android:name
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:22:27-73
+activity#com.iotaconcepts.aurum.LoginActivity
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:26:9-35:20
+	android:label
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:29:13-34
+	android:theme
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:28:13-58
+	android:name
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:27:13-42
+intent-filter#android.intent.action.LOGIN+android.intent.category.DEFAULT
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:30:13-34:29
+action#android.intent.action.LOGIN
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:31:17-70
+	android:name
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:31:25-67
+activity#com.iotaconcepts.aurum.Splash
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:37:9-46:20
+	android:label
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:40:13-34
+	android:theme
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:39:13-58
+	android:name
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:38:13-35
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:41:13-45:29
+action#android.intent.action.MAIN
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:42:17-69
+	android:name
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:42:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:44:17-77
+	android:name
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:44:27-74
+uses-sdk
+INJECTED from E:\Aurum\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		INJECTED from E:\Aurum\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Aurum\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\Aurum\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Aurum\app\src\main\AndroidManifest.xml
