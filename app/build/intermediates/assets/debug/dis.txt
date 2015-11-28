@@ -5,34 +5,34 @@ S.no.	Diseases	Symptom no.
 3	Arthritis (Rheumatic)	1, 5, 25, 29, 30
 4	Asthma	31, 32, 33, 34
 5	Bronchitis	31, 34, 35, 1
-6	Chikungunya	1, 2, 7, 8, 24-97, 51
+6	Chikungunya	1, 2, 7, 8, 24, 51
 7	Conjunctivitis	81, 82, 94
 8	Ear infection	40, 41, 42
-9	Dengue	3 (maybe), 7, 8, 10-97, 18, 9-25, 24-97
+9	Dengue	3, 7, 8, 10, 18, 9, 25, 24
 10	Dermatitis	20, 43, 75
 11	Diabetes (Type 2)	1, 36, 37, 38, 39
 12	Epilepsy	46, 47, 48
 13	Influenza	1, 7, 10, 12, 13, 32, 49
 14	Gallstone	2, 3, 50, 51, 52, 53
-15	Gout	24-97, 57, 95
+15	Gout	24, 57, 95
 16	Haemorrhage	3, 44, 47, 58, 59
-17	Hepatitis A	1, 2, 3, 5, 16, 17, 24-97
+17	Hepatitis A	1, 2, 3, 5, 16, 17, 24
 18	Hepatitis B	1, 2, 3, 5, 16, 17, 24
-19	Hepatitis C	1, 2, 3, 5, 16, 24-97
+19	Hepatitis C	1, 2, 3, 5, 16, 24, 
 20	Hernia (Incarcerated)	89, 90, 91
-21	Herpes	5, 10, 55, 56-97, 
-22	Kidney Stone	51-97, 36 63, 71
-23	Malaria	2, 3, 7, 12, 13-97, 10 (maybe)
+21	Herpes	5, 10, 55, 56
+22	Kidney Stone	51, 36, 63, 71
+23	Malaria	2, 3, 7, 12, 13, 10
 24	Osteoporosis	51, 65, 66
 25	Polycystic Ovary Syndrome (PCOS)	67, 68
-26	Parkinson’s disease	78, 79, 80
-27	Pneumonia	1, 3, 4, 7, 12, 13-97, 31, 34, 35
+26	Parkinson's disease	78, 79, 80
+27	Pneumonia	1, 3, 4, 7, 12, 13, 31, 34, 35
 28	Psoriasis	75, 76, 77
 29	Ringworm	15, 83, 84
 30	Scabies	14, 20, 43
-31	Streptococcal Meningitis	8, 6 or 7, 10, 13, 21, 69, 70
+31	Streptococcal Meningitis	8, 6, 7, 10, 13, 21, 69, 70
 32	Syphilis	55, 56, 69, 85
 33	Tuberculosis (TB)	1, 6, 12, 86, 87, 88
 34	Urinary Tract Infection (UTI) (lower)	36, 71, 72, 73, 74
-35	Urinary Tract Infection (UTI) (upper)	2, 3, 4, 7, 13-97, 71
-36	Yellow fever	1, 3, 5, 9, 21, 51, (later on 22)
+35	Urinary Tract Infection (UTI) (upper)	2, 3, 4, 7, 13, 71
+36	Yellow fever	1, 3, 5, 9, 21, 51

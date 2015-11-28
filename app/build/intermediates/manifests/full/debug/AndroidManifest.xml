@@ -10,6 +10,8 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <uses-library android:name="com.google.android.maps" />
+
     <!-- uses-permission android:name="android.permission.INTERNET" / -->
     <application
         android:allowBackup="true"
@@ -44,6 +46,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.iotaconcepts.aurum.Diagnosis" >
         </activity>
     </application>
 

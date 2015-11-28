@@ -305,7 +305,9 @@
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <!-- From: file:/E:/Aurum/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="get_answer">Click to get Selected Answer</string>
     <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
     <!-- From: file:/E:/Aurum/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>

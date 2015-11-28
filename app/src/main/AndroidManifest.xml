@@ -39,6 +39,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Diagnosis" >
+        </activity>
     </application>
+
+    <uses-library android:name="com.google.android.maps" />
 
 </manifest>

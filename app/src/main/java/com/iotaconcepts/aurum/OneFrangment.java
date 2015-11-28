@@ -1,31 +1,30 @@
 package com.iotaconcepts.aurum;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
-import com.iotaconcepts.aurum.R;
-
 import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.TreeMap;
-
+import java.util.List;
 
 public class OneFrangment extends Fragment
 {
-    public OneFrangment() {} //Default constructor
+    //Default constructor
+    public OneFrangment() {}
 
-
-
-    public TreeMap<Integer,String> sym=new TreeMap<Integer,String>(); //Stores the symptoms for various diseases
+    //DS
+    public TreeMap<Integer,String> sym=new TreeMap<Integer,String>(); //Stores the symptoms for various diseases\
+    ArrayList<Product> symptomList = new ArrayList<Product>();
+    ListAdapter boxAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -33,44 +32,89 @@ public class OneFrangment extends Fragment
         super.onCreate(savedInstanceState);
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    public void Parser(View myInflatedView)
     {
-        View myInflatedView = inflater.inflate(R.layout.fragment_one, container,false);
-        //Code for parsing the SYMPTOMS file and storing index,Symptom ins TreeMap sym
-        TextView tv = (TextView)myInflatedView.findViewById(R.id.textview);
         try
         {
             BufferedReader br=new BufferedReader(new InputStreamReader(getActivity().getAssets().open("symp.txt")));
             String parse1=br.readLine(); //Reads 'SYMPTOMS' from the file
-            tv.setText("");
             while((parse1=br.readLine())!=null)
             {
                 String[] separateCntandSymptom=parse1.split("\t");
                 Integer num= Integer.parseInt(separateCntandSymptom[0]);
                 String Symptom=separateCntandSymptom[1];
-                sym.put(num,Symptom);
-                tv.append(num+" "+sym.get(num)+"\n");
+                sym.put(num, Symptom);
             }
         }
         catch(Exception e)
         {
-            tv.append("SORRY\n");
+            //tv.append("SORRY\n");
             Toast.makeText(getActivity(),"SORRY!", Toast.LENGTH_LONG).show();
         }
-        //Done parsing Symptoms
+    }
 
-
-
-
-
-
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+        final View myInflatedView = inflater.inflate(R.layout.fragment_one, container, false);
+        //Method for parsing Symptoms
+        Parser(myInflatedView);
+        //Now, basically set the data and stuff
+        fillData();
+        boxAdapter = new ListAdapter(getActivity(), symptomList);
+        ListView lvMain = (ListView)myInflatedView.findViewById(R.id.lvMain);
+        lvMain.setAdapter(boxAdapter);
         // Inflate the layout for this fragment
+
+        //Return the veiw. Standard procedure
+
+        Button b1=(Button)myInflatedView.findViewById(R.id.button);
+        b1.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getActivity(), Diagnosis.class);
+                String numSymspace="";
+                int cnt=0;
+                for(int i:sym.keySet())
+                    numSymspace+=Integer.toString(i)+","+sym.get(i)+",";
+                numSymspace=numSymspace.substring(0,numSymspace.length()-1);
+                String sendSymptoms=getResult(myInflatedView);
+                intent.putExtra("userSymptoms",sendSymptoms.trim());
+                startActivity(intent);
+            }
+        });
+
         return myInflatedView;
     }
 
+    void fillData()
+    {
+        for (int i:sym.keySet())
+        {
+            symptomList.add(new Product(i, sym.get(i)));
+        }
+    }
 
-
-
-
+    public String getResult(View v)
+    {
+        String result = "";
+        for (Product p : boxAdapter.getBox())
+        {
+            if (p.box)
+            {
+                for(int i:sym.keySet())
+                    if(sym.get(i).equals(p.name))
+                    {
+                        result+=i+",";
+                        break;
+                    }
+            }
+        }
+        if(result.length()>0)
+            return result.substring(0,result.length()-1);
+        else
+            return "";
+    }
 }

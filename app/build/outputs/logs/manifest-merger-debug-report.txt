@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:2:1-44:12
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:2:1-48:12
 	package
 		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from E:\Aurum\app\src\main\AndroidManifest.xml
@@ -18,7 +18,7 @@ ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:5:5-79
 	android:name
 		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:5:22-76
 application
-ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:8:5-42:19
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:8:5-44:19
 MERGED from [com.android.support:appcompat-v7:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\AndroidManifest.xml:22:5-20
@@ -81,6 +81,14 @@ category#android.intent.category.LAUNCHER
 ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:39:17-77
 	android:name
 		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:39:27-74
+activity#com.iotaconcepts.aurum.Diagnosis
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:42:9-43:20
+	android:name
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:42:19-44
+uses-library#com.google.android.maps
+ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:46:5-60
+	android:name
+		ADDED from E:\Aurum\app\src\main\AndroidManifest.xml:46:19-57
 uses-sdk
 INJECTED from E:\Aurum\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.0.1] E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43

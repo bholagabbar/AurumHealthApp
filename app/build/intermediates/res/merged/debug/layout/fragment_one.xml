@@ -1,15 +1,26 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="info.androidhive.materialtabs.fragments.OneFragment">
-    android:w
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text="Hello"
-        />
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:weightSum="1">
 
+    <ListView
+        android:id="@+id/lvMain"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        >
+    </ListView>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/lvMain"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:onClick="showResult"
+        android:text="Diagnose"
+        android:layout_weight="0.45"
+        android:id="@+id/button">
+    </Button>
 
 </RelativeLayout><!-- From: file:/E:/Aurum/app/src/main/res/layout/fragment_one.xml -->

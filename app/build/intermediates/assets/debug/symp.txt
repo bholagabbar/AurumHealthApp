@@ -95,4 +95,3 @@ SYMPTOMS
 94	Increased tear production
 95	Inflammation of joints
 96	Sore throat
--97	Extreme pain in indicated part

@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Aurum</string>
-
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="menu_settings">Settings</string>
+    <string name="get_answer">Click to get Selected Answer</string>
+
+
 </resources>

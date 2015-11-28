@@ -77,8 +77,8 @@ public class MainActivity extends AppCompatActivity
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new OneFrangment(), "Symptoms");
-        adapter.addFragment(new TwoFragment(), "Diagnose");
-        adapter.addFragment(new TreeFragment(), "Hospitals");
+        adapter.addFragment(new TwoFragment(), "Hospitals");
+        adapter.addFragment(new TreeFragment(), "Call a Doctor");
         viewPager.setAdapter(adapter);
     }
 
