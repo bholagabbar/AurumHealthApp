@@ -4,21 +4,19 @@
     android:layout_height="match_parent"
     tools:context="info.androidhive.materialtabs.fragments.OneFragment">
 
-    <TextView
-        android:id="@+id/justtest"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Human body + visual aids to track disease and some remedies"
-        android:textSize="10dp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_alignParentTop="true"
+        android:src="@mipmap/image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
         />
 
     <Button
+        android:id="@+id/button"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:text="Sample button"
+        android:layout_height="65dp"
+        android:text="Get Location"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:background="@drawable/tiles_shape"
@@ -28,4 +26,5 @@
         android:layout_marginBottom="80dp"
         />
 
-</RelativeLayout><!-- From: file:/home/prasang/AndroidStudioProjects/AurumHealthApp/app/src/main/res/layout/fragment_two.xml -->
+
+</RelativeLayout><!-- From: file:/E:/Shreyans/Documents/AurumHealthApp/AurumHealthApp/app/src/main/res/layout/fragment_two.xml -->
