@@ -2,17 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.iotaconcepts.aurum" >
 
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!--uses-permission android:name="android.permission.INTERNET" / -->
 
-
+    <!-- uses-permission android:name="android.permission.INTERNET" / -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/MyMaterialTheme" >
-
         <activity
             android:name=".MainActivity"
             android:label="Aurum" >
@@ -22,31 +19,26 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/ColorfulActionBarTheme"
-            android:label="Aurum" >
+            android:label="Aurum"
+            android:theme="@style/ColorfulActionBarTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.LOGIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Splash"
-            android:theme="@style/ColorfulActionBarTheme"
-            android:label="Aurum" >
+            android:label="Aurum"
+            android:theme="@style/ColorfulActionBarTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
     </application>
 
 </manifest>

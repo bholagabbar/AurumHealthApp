@@ -1,0 +1,98 @@
+SYMPTOMS	
+1	Fatigue
+2	Nausea
+3	Vomiting
+4	Diarrhoea
+5	Mild fever (till 98.5)
+6	Moderate fever (98.5-100)
+7	High fever (above 100)
+8	Sudden fever
+9	Muscle pain
+10	Headache
+11	Weakness
+12	Profuse sweating
+13	Chills
+14	Itching
+15	Severe Itching
+16	Dark Urine
+17	Pale stool
+18	Pain behind eyes
+19	Burning sensation behind eyes
+20	Rashes
+21	Loss of appetite
+22	Bloody vomit
+23	Itching near anus
+24	Joint pain
+25	Tender joints
+26	Stiff joints
+27	Grating joints
+28	Loss of flexibility
+29	Morning stiffness
+30	Weight loss
+31	Shortness of breath
+32	Chronic coughing
+33	Trouble sleeping at night due to coughing
+34	Chest discomfort
+35	Coloured/uncoloured sputum cough
+36	Frequent urination
+37	Excessive thirst
+38	Blurry vision
+39	Sores and cuts not healing
+40	Ear pain
+41	Difficulty in hearing
+42	Fluid drainage from ear
+43	Crust formation on skin
+44	Loss of balance
+45	Temporary confusion
+46	Seizures
+47	Loss of consciousness
+48	Uncontrollable limb jerking
+49	Blocked nose
+50	Pain in upper abdomen
+51	Back pain
+52	Bloating
+53	Heartburn
+54	Indigestion/gas
+55	Blistery sores near genitals
+56	Itching near genitals
+57	Lingering discomfort
+58	Slurry speech
+59	Loss of coordination and taste
+60	Leakage of stool
+61	Cold limbs
+62	Irregular heartbeat
+63	Colourful urination
+64	Small amount of urination
+65	Loss of height
+66	Stooped posture
+67	Irregular periods
+68	Excess androgen (husky voice, whiskers)
+69	Trouble swallowing
+70	Swollen lymph nodes
+71	Pain during urination
+72	Smelly urine
+73	General uneasiness
+74	Cloudy and/or bloody urine
+75	Thick patches of red, dry, itchy skin
+76	Small scaly spots
+77	Dry skin prone to bleeding
+78	Tremor in limbs
+79	Rigid muscles
+80	Loss of automatic movements
+81	Pink/red colour in white of eyes
+82	Swelling of eyes
+83	Loss of hair in affected area
+84	Red ring patch with blisters
+85	Painless oozing ulcer
+86	Unintentional weight loss
+87	Coughing for more than 3 weeks
+88	Breathing pain
+89	Painful bulge in pubic bone (dark coloured)
+90	Sudden pain, quickly intensifies
+91	Rapid heartbeat
+92	Pale skin
+93	Dizziness
+94	Increased tear production
+95	Inflammation of joints
+96	Sore throat
+-97	Extreme pain in indicated part

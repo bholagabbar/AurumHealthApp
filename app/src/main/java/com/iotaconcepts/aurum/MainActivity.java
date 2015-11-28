@@ -1,7 +1,9 @@
 package com.iotaconcepts.aurum;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -13,19 +15,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import com.iotaconcepts.aurum.R;
-import com.iotaconcepts.aurum.OneFrangment;
-import com.iotaconcepts.aurum.TreeFragment;
-import com.iotaconcepts.aurum.TwoFragment;
-
 public class MainActivity extends AppCompatActivity
 {
+
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -62,11 +63,6 @@ public class MainActivity extends AppCompatActivity
 
 
         Toast.makeText(MainActivity.this, "Welcome " + user_name, Toast.LENGTH_SHORT).show();
-
-
-
-
-
 
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);

@@ -6,14 +6,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.iotaconcepts.aurum.R;
-
-
 public class TwoFragment extends Fragment
 {
 
+    //HashMap<String,String> xx=DiseaseAlgo.diseases;
+
+
+
     public TwoFragment()
     {
+
         // Required empty public constructor
     }
 
@@ -21,8 +23,6 @@ public class TwoFragment extends Fragment
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
-
 
     }
 

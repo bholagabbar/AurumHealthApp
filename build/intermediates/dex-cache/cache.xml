@@ -2,27 +2,6 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\User\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="E:\Aurum\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-d549de19b12dc583c9c92b246b485ac9c23198e7.jar" />
-    </item>
-    <item
-        jar="E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="E:\Aurum\app\build\intermediates\pre-dexed\debug\classes-ffb63c5519c27b57b47250bb0892dc8afce7fd59.jar" />
-    </item>
-    <item
-        jar="E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="E:\Aurum\app\build\intermediates\pre-dexed\debug\classes-97c3328b1b7da2d9ad9ca35fcac52335f282a8d5.jar" />
-    </item>
-    <item
         jar="E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -35,6 +14,27 @@
         revision="23.0.1"
         sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
         <dex dex="E:\Aurum\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-a8a4827645fc78980baaf7191f93a8c120823936.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="E:\Aurum\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-d549de19b12dc583c9c92b246b485ac9c23198e7.jar" />
+    </item>
+    <item
+        jar="E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="E:\Aurum\app\build\intermediates\pre-dexed\debug\classes-97c3328b1b7da2d9ad9ca35fcac52335f282a8d5.jar" />
+    </item>
+    <item
+        jar="E:\Aurum\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="E:\Aurum\app\build\intermediates\pre-dexed\debug\classes-ffb63c5519c27b57b47250bb0892dc8afce7fd59.jar" />
     </item>
 
 </items>
