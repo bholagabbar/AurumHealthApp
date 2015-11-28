@@ -22,7 +22,7 @@ public class Splash extends Activity
             {
                 try
                 {
-                    sleep(1500);
+                    sleep(500);
                 }
                 catch (InterruptedException e)
                 {

@@ -1,5 +1,6 @@
 package com.iotaconcepts.aurum;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import java.util.HashSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-public class Diagnosis extends AppCompatActivity
+public class Diagnosis extends Activity
 {
 
     TreeMap<Integer,String> symptoms=new TreeMap<Integer,String>();
@@ -137,7 +138,7 @@ public class Diagnosis extends AppCompatActivity
             for(int i:diseasesMappedtoSymptoms.get(dis))
                 if(hs.contains(i)) //If user symptoms contains this
                     cnt++;
-            if(cnt>1)
+            if(cnt>=1)
                 ts.add(new Node(dis,cnt));
         }
         int cnt=0;

@@ -39,8 +39,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Diagnosis" >
+
+        <activity
+            android:name=".Diagnosis"
+            android:label="Aurum"
+            android:theme="@style/Theme.Transparent" >
+            <intent-filter>
+                <action android:name="android.intent.action.DIAGNOSIS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
+
+
+
+
+
     </application>
 
     <uses-library android:name="com.google.android.maps" />

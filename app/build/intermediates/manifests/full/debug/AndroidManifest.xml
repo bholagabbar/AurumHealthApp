@@ -47,7 +47,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.iotaconcepts.aurum.Diagnosis" >
+        <activity
+            android:name="com.iotaconcepts.aurum.Diagnosis"
+            android:label="Aurum"
+            android:theme="@style/Theme.Transparent" >
+            <intent-filter>
+                <action android:name="android.intent.action.DIAGNOSIS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 
