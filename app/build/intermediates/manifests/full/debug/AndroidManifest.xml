@@ -81,11 +81,13 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyB3xjwvkxTs_lyOly2WQ8VldkolpVOPWNc" />
 
         <activity
-            android:name="com.iotaconcepts.aurum.MapsActivity"
-            android:label="@string/title_activity_maps" >
+            android:name="com.iotaconcepts.aurum.MapsActivity2"
+            android:label="@string/title_activity_maps2" >
+        </activity>
+        <activity android:name="com.iotaconcepts.aurum.testactivity" >
         </activity>
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity

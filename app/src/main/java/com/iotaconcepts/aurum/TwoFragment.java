@@ -31,7 +31,7 @@ public class TwoFragment extends Fragment
             @Override
             public void onClick(View v)
             {
-                startActivity(new Intent(getActivity(),MapsActivity.class));
+                startActivity(new Intent(getActivity(),MapsActivity2.class));
             }
         });
         return myInflatedView;

@@ -452,7 +452,7 @@
     <!-- From: file:/E:/Shreyans/Documents/AurumHealthApp/AurumHealthApp/app/src/debug/res/values/google_maps_api.xml -->
     <eat-comment/>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
-         AIzaSyCobnbSm2Vw7YsQNxZ1Jgbckk_b3_WAy7M
+         AIzaSyB3xjwvkxTs_lyOly2WQ8VldkolpVOPWNc
     </string>
     <!-- From: file:/E:/Shreyans/Documents/AurumHealthApp/AurumHealthApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
@@ -480,6 +480,7 @@
     <!-- From: file:/E:/Shreyans/Documents/AurumHealthApp/AurumHealthApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps2">Map</string>
     <!-- From: file:/E:/Shreyans/Documents/AurumHealthApp/AurumHealthApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.3.0/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>

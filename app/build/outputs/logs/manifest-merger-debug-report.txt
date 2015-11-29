@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:2:1-73:12
+ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:2:1-75:12
 	package
 		ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml
@@ -22,7 +22,7 @@ ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\Andr
 	android:name
 		ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:7:19-57
 application
-ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:10:5-71:19
+ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:10:5-73:19
 MERGED from [com.android.support:appcompat-v7:23.1.1] E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.1.1] E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\AndroidManifest.xml:22:5-20
@@ -195,17 +195,21 @@ ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\Andr
 	android:name
 		ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:49:25-71
 meta-data#com.google.android.geo.API_KEY
-ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:63:9-65:55
+ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:63:9-65:71
 	android:value
-		ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:65:13-52
+		ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:65:13-68
 	android:name
 		ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:64:13-58
-activity#com.iotaconcepts.aurum.MapsActivity
+activity#com.iotaconcepts.aurum.MapsActivity2
 ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:67:9-70:20
 	android:label
-		ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:69:13-56
+		ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:69:13-57
 	android:name
-		ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:68:13-41
+		ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:68:13-42
+activity#com.iotaconcepts.aurum.testactivity
+ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:71:9-72:20
+	android:name
+		ADDED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml:71:19-47
 uses-sdk
 INJECTED from E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.1.1] E:\Shreyans\Documents\AurumHealthApp\AurumHealthApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43
