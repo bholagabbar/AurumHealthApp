@@ -1,10 +1,21 @@
 package com.iotaconcepts.aurum;
 
+import android.content.Context;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -35,48 +46,124 @@ import java.util.List;
 //3. http://stackoverflow.com/questions/30253123/blue-dot-and-circle-is-not-shown-on-mylocation-using-android-fused-location-api/30255219#30255219
 
 
-public class MapsActivity2 extends AppCompatActivity implements OnMapReadyCallback
+public class MapsActivity2 extends AppCompatActivity implements
+        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
+        LocationListener,
+        OnMapReadyCallback
 {
     private GoogleMap mGoogleMap;
     SupportMapFragment mapFrag;
+    LocationRequest mLocationRequest;
+    GoogleApiClient mGoogleApiClient;
+    LatLng latLng;
+    double mLatitude=0;
+    double mLongitude=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
 
-        //Wrong one:
-        //setContentView(R.layout.activity_main);
-
-        //Use this one:
         setContentView(R.layout.activity_maps2);
 
         mapFrag = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFrag.getMapAsync(this);
-
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap)
     {
-        mGoogleMap=googleMap;
+
+        mGoogleMap = googleMap;
         mGoogleMap.setMyLocationEnabled(true);
+        buildGoogleApiClient();
+        mGoogleApiClient.connect();
         StringBuilder sbValue = new StringBuilder(sbMethod());
         PlacesTask placesTask = new PlacesTask();
         placesTask.execute(sbValue.toString());
     }
 
-    public StringBuilder sbMethod()
+    @Override
+    public void onPause()
     {
+        super.onPause();
+        //Unregister for location callbacks:
+        if (mGoogleApiClient != null)
+        {
+            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
+        }
+    }
 
-        //use your current location here
-        double mLatitude = 37.77657;
-        double mLongitude = -122.417506;
+    protected synchronized void buildGoogleApiClient()
+    {
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) throws SecurityException
+    {
+        Toast.makeText(this,"Connected",Toast.LENGTH_SHORT).show();
+        // Get LocationManager object from System Service LOCATION_SERVICE
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        // Create a criteria object to retrieve provider
+        Criteria criteria = new Criteria();
+        // Get the name of the best provider
+        String provider = locationManager.getBestProvider(criteria, true);
+        // Get Current Location
+        Location myLocation = locationManager.getLastKnownLocation(provider);
+        // Get latitude of the current location
+        double latitude = myLocation.getLatitude();
+        // Get longitude of the current location
+        double longitude = myLocation.getLongitude();
+        // Create a LatLng object for the current location
+        latLng = new LatLng(latitude, longitude);
+
+        //mGoogleMap.clear();
+        //latLng = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(latLng);
+        markerOptions.title("Current Position");
+        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+        Marker m = mGoogleMap.addMarker(markerOptions);
+        m.showInfoWindow();
+        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        mGoogleMap.animateCamera(CameraUpdateFactory.zoomTo(11));
+        Toast.makeText(this,"Touch the Pink Markers to View the Details of that Hospital",Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+        Toast.makeText(this,"onConnectionSuspended",Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+        Toast.makeText(this,"onConnectionFailed",Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+
+    }
+
+
+    public StringBuilder sbMethod() throws SecurityException
+    {
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        Criteria criteria = new Criteria();
+        String provider = locationManager.getBestProvider(criteria, true);
+        Location myLocation = locationManager.getLastKnownLocation(provider);
+        mLatitude=myLocation.getLatitude();
+        mLongitude=myLocation.getLongitude();
 
         StringBuilder sb = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
         sb.append("location=" + mLatitude + "," + mLongitude);
-        sb.append("&radius=5000");
-        sb.append("&types=" + "hospital");
+        sb.append("&radius=20000");
+        sb.append("&types=" + "hospital|doctor");
         sb.append("&sensor=true");
 
         sb.append("&key=AIzaSyCE791-a9rshad30K-B7ihl12b4_olfWaI");
@@ -180,7 +267,7 @@ public class MapsActivity2 extends AppCompatActivity implements OnMapReadyCallba
 
             Log.d("Map", "list size: " + list.size());
             // Clears all the existing markers;
-            mGoogleMap.clear();
+            //mGoogleMap.clear();
 
             for (int i = 0; i < list.size(); i++) {
 
@@ -205,7 +292,7 @@ public class MapsActivity2 extends AppCompatActivity implements OnMapReadyCallba
                 // Getting vicinity
                 String vicinity = hmPlace.get("vicinity");
 
-                LatLng latLng = new LatLng(lat, lng);
+                latLng = new LatLng(lat, lng);
 
                 // Setting the position for the marker
                 markerOptions.position(latLng);
@@ -216,7 +303,6 @@ public class MapsActivity2 extends AppCompatActivity implements OnMapReadyCallba
 
                 // Placing a marker on the touched position
                 Marker m = mGoogleMap.addMarker(markerOptions);
-
             }
         }
     }
