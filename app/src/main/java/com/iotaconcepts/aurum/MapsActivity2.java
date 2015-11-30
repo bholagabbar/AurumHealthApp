@@ -27,6 +27,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+//get user location: http://stackoverflow.com/questions/30253123/blue-dot-and-circle-is-not-shown-on-mylocation-using-android-fused-location-api/30255219#30255219
+
+//Important resource for making this work:
+//1. http://stackoverflow.com/questions/33971717/mapactivity-query-for-nearest-hospital-hospital-not-working
+//2. http://stackoverflow.com/questions/31011216/request-denied-with-google-places-api-key-for-server-web-used-in-an-android-appl/31014444#31014444
+//3. http://stackoverflow.com/questions/30253123/blue-dot-and-circle-is-not-shown-on-mylocation-using-android-fused-location-api/30255219#30255219
+
+
 public class MapsActivity2 extends AppCompatActivity implements OnMapReadyCallback
 {
     private GoogleMap mGoogleMap;
@@ -36,7 +44,12 @@ public class MapsActivity2 extends AppCompatActivity implements OnMapReadyCallba
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        //Wrong one:
+        //setContentView(R.layout.activity_main);
+
+        //Use this one:
+        setContentView(R.layout.activity_maps2);
 
         mapFrag = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFrag.getMapAsync(this);
@@ -63,10 +76,10 @@ public class MapsActivity2 extends AppCompatActivity implements OnMapReadyCallba
         StringBuilder sb = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
         sb.append("location=" + mLatitude + "," + mLongitude);
         sb.append("&radius=5000");
-        sb.append("&types=" + "restaurant");
+        sb.append("&types=" + "hospital");
         sb.append("&sensor=true");
 
-        sb.append("&key=AIzaSyB3xjwvkxTs_lyOly2WQ8VldkolpVOPWNc");
+        sb.append("&key=AIzaSyCE791-a9rshad30K-B7ihl12b4_olfWaI");
 
         Log.d("Map", "url: " + sb.toString());
 
