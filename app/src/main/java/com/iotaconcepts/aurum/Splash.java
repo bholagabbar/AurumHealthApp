@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
-
 public class Splash extends Activity
 {
     @Override
@@ -13,7 +12,6 @@ public class Splash extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
-
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         Thread timer = new Thread()
@@ -22,7 +20,7 @@ public class Splash extends Activity
             {
                 try
                 {
-                    sleep(500);
+                    sleep(2500);
                 }
                 catch (InterruptedException e)
                 {
@@ -31,16 +29,10 @@ public class Splash extends Activity
                 finally
                 {
                     finish();
-
                     startActivity(new Intent(Splash.this, MainActivity.class));
                 }
             }
-
         };
         timer.start();
-
     }
-
-
-
 }

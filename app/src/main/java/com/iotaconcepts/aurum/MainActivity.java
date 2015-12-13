@@ -1,6 +1,8 @@
 package com.iotaconcepts.aurum;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.AssetManager;
@@ -26,7 +28,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity
 {
-
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -41,7 +42,6 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
 
         // these session managers have users input data!
         name_sex_session = new SessionManager(getApplicationContext());
@@ -61,9 +61,7 @@ public class MainActivity extends AppCompatActivity
         user_lat = user_2.get(LocationSessionManager.KEY_NAME);
         user_lon = user_2.get(LocationSessionManager.KEY_EMAIL);
 
-
-        Toast.makeText(MainActivity.this, "Welcome " + user_name, Toast.LENGTH_SHORT).show();
-
+        //Toast.makeText(MainActivity.this, "Welcome " + user_name, Toast.LENGTH_SHORT).show();
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -76,9 +74,8 @@ public class MainActivity extends AppCompatActivity
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new OneFrangment(), "Symptoms");
-        adapter.addFragment(new TwoFragment(), "Hospitals");
-        adapter.addFragment(new TreeFragment(), "Call a Doctor");
+        adapter.addFragment(new TwoFragment(), "Nearby Hospitals");
+        adapter.addFragment(new OneFrangment(), "Symptoms & Diseases");
         viewPager.setAdapter(adapter);
     }
 
@@ -159,33 +156,58 @@ public class MainActivity extends AppCompatActivity
 
         if(id == R.id.action_about)  //About
         {
-            //Intent i = new Intent(MainActivity.this, About.class);
-            //startActivity(i);
+
+
+
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+
+            // Setting Dialog Title
+            alertDialog.setTitle("About");
+
+            // Setting Dialog Message
+            alertDialog.setMessage("Aurum Health App is your personal healthcare assistant, that brings you the location of nearby hospitals along with their details. Aurum also helps you to track or map a disease based on the various symptoms." +
+                    "\n\nDevelopers:\n\nShreyans Sheth\nshreyans.sheth@gmail.com\n\nPrasang Sharma\nprasang.sharma7@gmail.com\n\nAniket Joshi\naniket_joshi3000@yahoo.co.in\n\nIcons for this app are designed with flaticon.com");
+
+
+            // if User clicks Accept
+            alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+
+            alertDialog.show();
+
+
+
         }
 
         if (id == R.id.action_disclaimer)  //Disclaimer
         {
-            //Intent i = new Intent(MainActivity.this, Disclaimer.class);
-            //startActivity(i);
+
+
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+
+            // Setting Dialog Title
+            alertDialog.setTitle("Disclaimer. Legal Notice.");
+
+            // Setting Dialog Message
+            alertDialog.setMessage("\n" +
+                    "Users kindly understand that this app is meant for educational purpose only. This application is NOT meant for SELF DIAGNOSIS. The results provided by this app are not a legal advice. This app maps various symptoms to their PROBABLE diseases or cause. Actual disease may vary depending on various conditions. This method is not the best means of diagnosis. Please visit a registered doctor in case you require a medical assistance or help.\n\nThe result generated based on the information given by the user is only for informative and indicative purposes. Therefore, the developers make no warranties whatsoever nor is responsible for damages of any kind regarding the use of this app or any decision made by the user.\n");
+
+
+
+            // if User clicks Accept
+            alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+
+            alertDialog.show();
         }
 
 
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

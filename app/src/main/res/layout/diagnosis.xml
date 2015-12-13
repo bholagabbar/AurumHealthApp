@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:textColor="#ffffff"
-        android:text="Probable disease: \n"
+        android:text="Probable diseases: \n\n"
         android:id="@+id/tv_parentText"
         android:layout_marginTop="20dp"
         />

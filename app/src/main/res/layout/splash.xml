@@ -2,19 +2,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#140000"
+    android:background="#0689D8"
     >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/aurum_icon_white"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"
-        android:text="AURUM"
+        android:text="Aurum Healthcare App"
         android:textColor="#ffffff"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="0dp"
         />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Personal Medical Assistant"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        />
 
 </LinearLayout>

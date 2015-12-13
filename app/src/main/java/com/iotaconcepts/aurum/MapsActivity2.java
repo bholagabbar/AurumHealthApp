@@ -63,7 +63,6 @@ public class MapsActivity2 extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_maps2);
 
         mapFrag = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -73,7 +72,6 @@ public class MapsActivity2 extends AppCompatActivity implements
     @Override
     public void onMapReady(GoogleMap googleMap)
     {
-
         mGoogleMap = googleMap;
         mGoogleMap.setMyLocationEnabled(true);
         buildGoogleApiClient();
@@ -147,9 +145,7 @@ public class MapsActivity2 extends AppCompatActivity implements
 
     @Override
     public void onLocationChanged(Location location) {
-
     }
-
 
     public StringBuilder sbMethod() throws SecurityException
     {
@@ -166,8 +162,8 @@ public class MapsActivity2 extends AppCompatActivity implements
         sb.append("&types=" + "hospital|doctor");
         sb.append("&sensor=true");
 
-        sb.append("&key=AIzaSyCE791-a9rshad30K-B7ihl12b4_olfWaI");
-
+        sb.append("&key=AIzaSyD4lzr-kyU4D3qdBX6ym-men1nyFzT8fss");
+        //AIzaSyCE791-a9rshad30K-B7ihl12b4_olfWaI - old key
         Log.d("Map", "url: " + sb.toString());
 
         return sb;

@@ -42,7 +42,7 @@ public class Diagnosis extends Activity
         ArrayList<String> finalProblableDiseases=getProbableDiseases();
 
         for(String x:finalProblableDiseases) //Printing probable diseases. Add features mentioned above
-            tv.append(x+"\n");
+            tv.append(x+"\n\n");
 
         //Got everything
 

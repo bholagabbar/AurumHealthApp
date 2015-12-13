@@ -4,27 +4,61 @@
     android:layout_height="match_parent"
     tools:context="info.androidhive.materialtabs.fragments.OneFragment">
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <SurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#D3D3D3"
+        android:id="@+id/sv_grey_1"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@mipmap/image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="85dp"
+        android:text="Welcome to Aurum Health App.\nYour Personal Medical Assistant."
+        android:layout_margin="10dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/hospital_place_icon"
+        android:layout_marginTop="0dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="0dp"
+        android:id="@+id/iv_hospital"
+        android:layout_below="@+id/sv_grey_1"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_hospital"
+        android:layout_margin="30dp"
+        android:text="Click on 'Search Nearby Hospitals' to get location and details of Hospitals in your location."
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="20dp"
         />
 
     <Button
         android:id="@+id/button"
         android:layout_width="fill_parent"
-        android:layout_height="65dp"
-        android:text="Get Location"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_height="50dp"
+        android:text="Search Nearby Hospitals"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:background="@drawable/tiles_shape"
         android:textColor="#ffffff"
         android:textSize="15dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="70dp"
         />
 
 
-</RelativeLayout><!-- From: file:/E:/Shreyans/Documents/AurumHealthApp/AurumHealthApp/app/src/main/res/layout/fragment_two.xml -->
+</RelativeLayout>
