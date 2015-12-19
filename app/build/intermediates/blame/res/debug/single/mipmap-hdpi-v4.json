@@ -1,10 +1,18 @@
 [
     {
-        "merged": "/home/prasang/AndroidStudioProjects/Aurum_Health_App/AurumHealthApp/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
-        "source": "/home/prasang/AndroidStudioProjects/Aurum_Health_App/AurumHealthApp/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+        "merged": "E:\\home\\prasang\\AndroidStudioProjects\\Aurum_Health_App\\AurumHealthApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "E:\\home\\prasang\\AndroidStudioProjects\\Aurum_Health_App\\AurumHealthApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "/home/prasang/AndroidStudioProjects/Aurum_Health_App/AurumHealthApp/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/image.png",
-        "source": "/home/prasang/AndroidStudioProjects/Aurum_Health_App/AurumHealthApp/app/src/main/res/mipmap-hdpi/image.png"
+        "merged": "E:\\home\\prasang\\AndroidStudioProjects\\Aurum_Health_App\\AurumHealthApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\image.png",
+        "source": "E:\\home\\prasang\\AndroidStudioProjects\\Aurum_Health_App\\AurumHealthApp\\app\\src\\main\\res\\mipmap-hdpi\\image.png"
+    },
+    {
+        "merged": "E:\\Shreyans\\Documents\\AurumHealthApp\\AurumHealthApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\image.png",
+        "source": "E:\\Shreyans\\Documents\\AurumHealthApp\\AurumHealthApp\\app\\src\\main\\res\\mipmap-hdpi\\image.png"
+    },
+    {
+        "merged": "E:\\Shreyans\\Documents\\AurumHealthApp\\AurumHealthApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "E:\\Shreyans\\Documents\\AurumHealthApp\\AurumHealthApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
 ]

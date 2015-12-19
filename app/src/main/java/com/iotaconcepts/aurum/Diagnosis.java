@@ -1,20 +1,13 @@
 package com.iotaconcepts.aurum;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.iotaconcepts.aurum.OneFrangment;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
@@ -41,8 +34,16 @@ public class Diagnosis extends Activity
         ParseDiseases();
         ArrayList<String> finalProblableDiseases=getProbableDiseases();
 
-        for(String x:finalProblableDiseases) //Printing probable diseases. Add features mentioned above
-            tv.append(x+"\n\n");
+        if(finalProblableDiseases.size()==0)
+        {
+            tv.setText("Sorry!\nPlease enter the Exact Symptoms.\nWe were unable to trace these symptoms to a disease in our database");
+        }
+        else
+        {
+            tv.setText("Probable diseases: \n\n");
+            for(String x:finalProblableDiseases) //Printing probable diseases. Add features mentioned above
+                tv.append("-> "+x+"\n\n");
+        }
 
         //Got everything
 
@@ -124,7 +125,7 @@ public class Diagnosis extends Activity
         HashSet<Integer> hs=new HashSet<Integer>();
         for(Integer s:userSymptoms)
             hs.add(s);
-        TreeSet<Node> ts=new TreeSet<Node>(new Comparator<Node>() //Stores Diseaess in descending order
+        TreeSet<Node> ts=new TreeSet<Node>(new Comparator<Node>() //Stores Diseaess in descending order of priority
         {
             @Override
             public int compare(Node o1, Node o2)
@@ -138,11 +139,11 @@ public class Diagnosis extends Activity
             for(int i:diseasesMappedtoSymptoms.get(dis))
                 if(hs.contains(i)) //If user symptoms contains this
                     cnt++;
-            if(cnt>=1)
+            if(cnt>=3)
                 ts.add(new Node(dis,cnt));
         }
         int cnt=0;
-        while(cnt<5 && !ts.isEmpty()) //Max 5 diseases
+        while(cnt<4 && !ts.isEmpty()) //Max 4 diseases
         {
             finalDiseases.add(ts.pollFirst().f);
             cnt++;

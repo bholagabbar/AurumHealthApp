@@ -14,7 +14,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.TreeMap;
-import java.util.List;
 
 public class OneFrangment extends Fragment
 {
@@ -81,8 +80,20 @@ public class OneFrangment extends Fragment
                     numSymspace+=Integer.toString(i)+","+sym.get(i)+",";
                 numSymspace=numSymspace.substring(0,numSymspace.length()-1);
                 String sendSymptoms=getResult(myInflatedView);
-                intent.putExtra("userSymptoms",sendSymptoms.trim());
-                startActivity(intent);
+                String[] checkSymptomListSize;
+                if(sendSymptoms.length()>0)
+                    checkSymptomListSize=sendSymptoms.split(",");
+                else
+                    checkSymptomListSize=new String[0];
+                if(checkSymptomListSize.length<3)
+                {
+                    Toast.makeText(getActivity(),"Please enter atleast 3 Symptoms!", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    intent.putExtra("userSymptoms",sendSymptoms.trim());
+                    startActivity(intent);
+                }
             }
         });
 
